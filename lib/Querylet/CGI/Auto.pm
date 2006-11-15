@@ -12,7 +12,7 @@ Querylet::CGI::Auto - run a querylet as context suggests
 
 version 0.12
 
- $Id: Auto.pm,v 1.1 2004/09/20 18:40:20 rjbs Exp $
+ $Id$
 
 =cut
 

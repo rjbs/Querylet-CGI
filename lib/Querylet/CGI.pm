@@ -13,7 +13,7 @@ Querylet::CGI - turn a querylet into a web application
 
 version 0.14
 
- $Id: CGI.pm,v 1.7 2004/12/16 16:04:29 rjbs Exp $
+ $Id$
 
 =cut
 
