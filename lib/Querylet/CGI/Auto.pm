@@ -10,13 +10,13 @@ Querylet::CGI::Auto - run a querylet as context suggests
 
 =head1 VERSION
 
-version 0.12
+version 0.141
 
  $Id$
 
 =cut
 
-our $VERSION = '0.12';
+our $VERSION = '0.141';
 
 =head1 SYNOPSIS
 
@@ -90,7 +90,7 @@ notified of progress on your bug as I make changes.
 
 =head1 COPYRIGHT
 
-Copyright 2004 Ricardo SIGNES, All Rights Reserved.
+Copyright 2004-2006 Ricardo SIGNES, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

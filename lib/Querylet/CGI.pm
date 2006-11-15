@@ -11,13 +11,13 @@ Querylet::CGI - turn a querylet into a web application
 
 =head1 VERSION
 
-version 0.14
+version 0.141
 
  $Id$
 
 =cut
 
-our $VERSION = '0.14';
+our $VERSION = '0.141';
 
 =head1 SYNOPSIS
 

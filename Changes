@@ -1,5 +1,8 @@
 Revision history for Querylet-CGI
 
+0.141   2006-11-14
+        packaging improvements
+
 0.14    2004-12-16 11:00
         respect column headers
 
