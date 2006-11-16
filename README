@@ -1,0 +1,4 @@
+README for Querylet-CGI
+
+Querylet::CGI retrieves input from CGI parameters, and provides as output an
+HTML form if not all parameters can be retrieved.
