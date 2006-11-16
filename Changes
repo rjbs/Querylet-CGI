@@ -1,5 +1,8 @@
 Revision history for Querylet-CGI
 
+0.142   2006-11-16
+        added machine-readable license
+
 0.141   2006-11-14
         packaging improvements
 
