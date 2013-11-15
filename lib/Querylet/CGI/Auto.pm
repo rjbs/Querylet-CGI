@@ -1,22 +1,8 @@
-package Querylet::CGI::Auto;
-use base qw(Querylet::Input);
-
-use warnings;
 use strict;
-
-=head1 NAME
-
-Querylet::CGI::Auto - run a querylet as context suggests
-
-=head1 VERSION
-
-version 0.141
-
- $Id$
-
-=cut
-
-our $VERSION = '0.141';
+use warnings;
+package Querylet::CGI::Auto;
+use parent qw(Querylet::Input);
+# ABSTRACT: run a querylet as context suggests
 
 =head1 SYNOPSIS
 
@@ -44,11 +30,7 @@ the GATEWAY_ENVIRONMENT environment variable is set, and "term" otherwise.
 Since Querylet::CGI will set the output format on its own, the output format
 should be set to the type to be used if running outside of a CGI environment.
 
-=head1 METHODS
-
-=over 4
-
-=item C<< default_type >>
+=method default_type
 
 Querylet::CGI::Auto acts as a Querylet::Input module, and registers itself as
 an input handler when used.  The default type to register is 'auto'
@@ -57,7 +39,7 @@ an input handler when used.  The default type to register is 'auto'
 
 sub default_type { 'auto' }
 
-=item C<< handler >>
+=method handler
 
 The default registered handler will (ack!) use magic goto to switch to the
 correct handler, based on the environment.
@@ -74,27 +56,5 @@ sub _auto_cgi {
 		goto &Querylet::Query::from_term;
 	}
 }
-
-=back
-
-=head1 AUTHOR
-
-Ricardo SIGNES, C<< <rjbs@cpan.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to
-C<bug-querylet-cgi@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.  I will be notified, and then you'll automatically be
-notified of progress on your bug as I make changes.
-
-=head1 COPYRIGHT
-
-Copyright 2004-2006 Ricardo SIGNES, All Rights Reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
-=cut
 
 1;

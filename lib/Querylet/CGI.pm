@@ -1,23 +1,10 @@
-package Querylet::CGI;
-use CGI qw/param/;
-use base(Querylet::Input);
-
-use warnings;
 use strict;
+use warnings;
+package Querylet::CGI;
+use parent 'Querylet::Input';
+# ABSTRACT: turn a querylet into a web application
 
-=head1 NAME
-
-Querylet::CGI - turn a querylet into a web application
-
-=head1 VERSION
-
-version 0.142
-
- $Id$
-
-=cut
-
-our $VERSION = '0.142';
+use CGI qw/param/;
 
 =head1 SYNOPSIS
 
@@ -43,11 +30,7 @@ parameters from the CGI environment.  If not all required inputs are found, it
 changes the Query object's output type, causing it to produce a form requesting
 the required input parameters.
 
-=head1 METHODS
-
-=over 4
-
-=item C<< default_type >>
+=method default_type
 
 Querylet::CGI acts as a Querylet::Input module, and registers itself as an
 input handler when used.  The default type to register is 'cgi'
@@ -56,7 +39,7 @@ input handler when used.  The default type to register is 'cgi'
 
 sub default_type { 'cgi' }
 
-=item C<< handler >>
+=method handler
 
 The default registered handler will retrieve parameters from the CGI
 environment using the CGI module.
@@ -115,27 +98,5 @@ sub _as_html {
 
 	$html .= "</table></body></html>\n";
 }
-
-=back
-
-=head1 AUTHOR
-
-Ricardo SIGNES, C<< <rjbs@cpan.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to
-C<bug-querylet-cgi@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.  I will be notified, and then you'll automatically be
-notified of progress on your bug as I make changes.
-
-=head1 COPYRIGHT
-
-Copyright 2004 Ricardo SIGNES, All Rights Reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
-=cut
 
 1;
